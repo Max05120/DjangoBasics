@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-rs054lnjy4=c!n2%hqee36yvy+yaibn-n(r(q4=%i9ylv-&vd)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-$ heroku config:set DISABLE_COLLECTSTATIC=1
+
 
 # Application definition
 
@@ -121,6 +121,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
